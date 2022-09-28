@@ -12,9 +12,13 @@ Welcome to CreateAnAPI.com's documentation!
 
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   api
+   repository
+   task
+   platform
+   mail
+   bucket
+   log
+   nuget
+   services

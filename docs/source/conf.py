@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'CreateAnAPI.com'
-copyright = '2022, Mehmet Buber'
+copyright = '2022, CreateAnAPI.com'
 author = 'Mehmet Buber'
 release = '1.0.0'
 

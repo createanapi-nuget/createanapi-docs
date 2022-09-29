@@ -29,3 +29,11 @@ Welcome to CreateAnAPI.com's documentation!
    services/index
    nuget/index
    
+
+.. toctree::
+   :caption: Docs Elements
+   :maxdepth: -1
+
+   elements/demo
+   elements/lists_tables
+   elements/structure

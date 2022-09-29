@@ -7,18 +7,12 @@ Welcome to CreateAnAPI.com's documentation!
 ===========================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
-
-.. toctree::
-   api
-   repository
-   task
-   platform
-   mail
-   bucket
-   log
-   nuget
-   services
+   auth/index
+   repository/index
+   task/index
+   log/index
+   bucket/index
+   mail/index
+   platform/index
+   services/index
+   nuget/index

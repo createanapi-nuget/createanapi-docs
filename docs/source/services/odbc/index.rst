@@ -10,45 +10,15 @@ C:\inetpub\wwwroot\createanapi-odbc\appsettings.Production.json
    :linenos:
 
     {
-    "ODBC": {
-        "APIs": [
-        {
-            "Id": "level10",
-            "AccountId": "5e1f559d1ca17a343cc7c1fd",
-            "DSN": "DSN=level10;uid=extro;pwd=extro;"
-        },
-        {
-            "Id": "moxie",
-            "AccountId": "5e1f559d1ca17a343cc7c1fd",
-            "DSN": "DSN=Moxie;uid=extro;pwd=extro;"
-        },
-        {
-            "Id": "nationalink",
-            "AccountId": "5e1f559d1ca17a343cc7c1fd",
-            "DSN": "DSN=NationalInk;uid=extro;pwd=extro;"
-        },
-        {
-            "Id": "protowels",
-            "AccountId": "5e1f559d1ca17a343cc7c1fd",
-            "DSN": "DSN=ProTowels;uid=extro;pwd=extro;"
-        },
-        {
-            "Id": "seacost",
-            "AccountId": "5e1f559d1ca17a343cc7c1fd",
-            "DSN": "DSN=SeaCost;uid=extro;pwd=extro;"
-        },
-        {
-            "Id": "seaside",
-            "AccountId": "5e1f559d1ca17a343cc7c1fd",
-            "DSN": "DSN=SeaSideSilkScreening;uid=extro;pwd=extro;"
-        },
-        {
-            "Id": "wolfmark",
-            "AccountId": "5e1f559d1ca17a343cc7c1fd",
-            "DSN": "DSN=Wolfmark;uid=extro;pwd=extro;"
-        },
-        ] 
-    }
+        "ODBC": {
+            "APIs": [
+                {
+                    "Id": "{{API_SHORTCODE}}",
+                    "AccountId": "{{CAA_ACCOUNT_ID}}",
+                    "DSN": "{{ODBC_DSN}}"
+                }
+            ] 
+        }
     }
 
 
@@ -92,8 +62,8 @@ Client appconfig.json
             "APIUrl": "https://apiv2.createanapi.com",
             "ODBCAPIUrl": "http://52.15.35.208:5000",
             "Authority": "https://identity.createanapi.com",
-            "ClientId": "api-client",
-            "ClientSecret": "SuperSecretPassword",
+            "ClientId": "{{CLIENT_ID}}",
+            "ClientSecret": "{{CLIENT_SECRET}}",
             "Scope": "createanapi_full_access"
         }
     }

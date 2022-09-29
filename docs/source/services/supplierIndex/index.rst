@@ -21,16 +21,16 @@ Supplier Index API Config
 
     "Config": {
         "Clients": [
-        {
-            "Name": "Demo",
-            "AccountId": "5e1f559d1ca17a343cc7c1fd",
-            "Suppliers": [
-            "sanmar",
-            "alphabroder",
-            "cutterandbuck",
-            "sns"
-            ]
-        }
+            {
+                "Name": "Demo",
+                "AccountId": "5e1f559d1ca17a343cc7c1fd",
+                "Suppliers": [
+                    "sanmar",
+                    "alphabroder",
+                    "cutterandbuck",
+                    "sns"
+                ]
+            }
         ]
     }
 
@@ -182,14 +182,14 @@ Supplier Index API Config - New Supplier
 
     "Config": {
         "Suppliers": [
-        {
-            "ShortCode": "sanmar",
-            "Name": "SanMar",
-            "ProductDataRepositoryId": "62ec0e265f3d995ff233a6d6",
-            "PartDataRepositoryId": "62ec0eb15f3d995ff233a6db",
-            "InventoryRepositoryId": "62ec0e335f3d995ff233a6d7",
-            "PPCRepositoryId": "62ec0e665f3d995ff233a6d9",
-            "MediaRepositoryId": "62ec0e465f3d995ff233a6d8"
-        }
+            {
+                "ShortCode": "sanmar",
+                "Name": "SanMar",
+                "ProductDataRepositoryId": "62ec0e265f3d995ff233a6d6",
+                "PartDataRepositoryId": "62ec0eb15f3d995ff233a6db",
+                "InventoryRepositoryId": "62ec0e335f3d995ff233a6d7",
+                "PPCRepositoryId": "62ec0e665f3d995ff233a6d9",
+                "MediaRepositoryId": "62ec0e465f3d995ff233a6d8"
+            }
         ]
     }

@@ -1,10 +1,6 @@
 Supplier Index
 ==============
 
-This section of the documentation details the public API
-usable to get details of projects, builds, versions and other details
-from Read the Docs.
-
 Swagger
 ---------------
 https://supplier-index.createanapi.com/swagger/index.html

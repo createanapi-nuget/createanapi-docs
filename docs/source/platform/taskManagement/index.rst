@@ -1,11 +1,6 @@
 Task Management
 ===============
 
-This section of the documentation details the public API
-usable to get details of projects, builds, versions and other details
-from Read the Docs.
-
-
 Enables the end user to trigger the tasks. 
 
 .. image:: images/task-management-1.png

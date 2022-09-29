@@ -1,12 +1,115 @@
 Repository .NET Client
 ======================
 
-This section of the documentation details the public API
-usable to get details of projects, builds, versions and other details
-from Read the Docs.
+CreateAnAPI.Client nuget package contains functions for all available CreateAnAPI Core Repository API endpoints.
+
+Query Functions
+---------------
+
+Get Data
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns an item by id.
+
+.. code-block:: csharp
+   :linenos:
+
+    var get = await _createAnAPIClient.Get<Order>(_config.RepositoryId, post.Data.DataId);
+
+
+Get Data List
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns item list by states and / or data filters. Max 250 items.
+
+.. code-block:: csharp
+   :linenos:
+
+    var getList = await _createAnAPIClient.GetList<Order>(_config.RepositoryId, 0, 10, null, new List<DataFilter>());
+
+
+Get All Data
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns all item list by states and / or data filters. 
+
+.. code-block:: csharp
+   :linenos:
+
+    var getAll = await _createAnAPIClient.GetAll<Order>(_config.RepositoryId, null, new List<DataFilter>(), 250);
+
+
+Get First Data
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns first item in list by states and / or data filters. 
+
+.. code-block:: csharp
+   :linenos:
+   
+    var first = await _createAnAPIClient.First<Order>(_config.RepositoryId, null, new List<DataFilter>());
+
+
+Get Data Count
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns count of items in list by states and / or data filters. 
+
+.. code-block:: csharp
+   :linenos:
+
+    var count = await _createAnAPIClient.Count(_config.RepositoryId);
+
+
+Get Sum of a given Field
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns sum of items given field in list by states and / or data filters. 
+
+.. code-block:: csharp
+   :linenos:
+
+    var sum = await _createAnAPIClient.Sum<decimal>(_config.RepositoryId, "totalAmount", null, new List<DataFilter>());
+
+
+Get AVG of a given Field
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns average of items given field in list by states and / or data filters. 
+
+.. code-block:: csharp
+   :linenos:
+
+    var avg = await _createAnAPIClient.Avg<decimal>(_config.RepositoryId, "totalAmount", null, new List<DataFilter>());
+
+
+Get Min of a given Field
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns minimum of items given field in list by states and / or data filters. 
+
+.. code-block:: csharp
+   :linenos:
+
+    var min = await _createAnAPIClient.Min<DateTime>(_config.RepositoryId, "orderDate", null, new List<DataFilter>());
+
+
+Get Max of a given Field
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns maximum of items given field in list by states and / or data filters. 
+
+.. code-block:: csharp
+   :linenos:
+
+    var max = await _createAnAPIClient.Max<DateTime>(_config.RepositoryId, "orderDate", null, new List<DataFilter>());
+
+
+Insert Functions
+-----------------
 
 Post Data
----------
+"""""""""""""""""""""""""""""""""""""""""""
 
 Creates a new data.
 
@@ -27,9 +130,8 @@ Creates a new data.
     });
 
 
-
 Post Data List
----------------
+"""""""""""""""""""""""""""""""""""""""""""
 
 Creates a new data in bulk. Max 250 items.
 
@@ -79,10 +181,11 @@ Creates a new data in bulk. Max 250 items.
         }
     });
 
-
+Update Functions
+----------------
 
 Update Data
----------------
+"""""""""""""""""""""""""""""""""""""""""""
 
 Updates a data by id.
 
@@ -96,10 +199,8 @@ Updates a data by id.
         Logs = new List<object>()
     });
 
-
-
 Update Data List
-----------------
+"""""""""""""""""""""""""""""""""""""""""""
 
 Updates multiple items in bulk. Max 250 items.
 
@@ -152,10 +253,8 @@ Updates multiple items in bulk. Max 250 items.
         }
     });
 
-
-
 Change State
----------------
+"""""""""""""""""""""""""""""""""""""""""""
 
 Changes data states in bulk based on states and / or data filters.
 
@@ -169,109 +268,11 @@ Changes data states in bulk based on states and / or data filters.
         OldState = null
     });
 
-
-
-Get Data
----------------
-
-Returns an item by id.
-
-.. code-block:: csharp
-   :linenos:
-
-    var get = await _createAnAPIClient.Get<Order>(_config.RepositoryId, post.Data.DataId);
-
-
-Get Data List
----------------
-
-Returns item list by states and / or data filters. Max 250 items.
-
-.. code-block:: csharp
-   :linenos:
-
-    var getList = await _createAnAPIClient.GetList<Order>(_config.RepositoryId, 0, 10, null, new List<DataFilter>());
-
-
-Get All Data
----------------
-
-Returns all item list by states and / or data filters. 
-
-.. code-block:: csharp
-   :linenos:
-
-    var getAll = await _createAnAPIClient.GetAll<Order>(_config.RepositoryId, null, new List<DataFilter>(), 250);
-
-
-Get First Data
----------------
-
-Returns first item in list by states and / or data filters. 
-
-.. code-block:: csharp
-   :linenos:
-   
-    var first = await _createAnAPIClient.First<Order>(_config.RepositoryId, null, new List<DataFilter>());
-
-
-Get Data Count
----------------
-
-Returns count of items in list by states and / or data filters. 
-
-.. code-block:: csharp
-   :linenos:
-
-    var count = await _createAnAPIClient.Count(_config.RepositoryId);
-
-
-Get Sum of a given Field
-------------------------
-
-Returns sum of items given field in list by states and / or data filters. 
-
-.. code-block:: csharp
-   :linenos:
-
-    var sum = await _createAnAPIClient.Sum<decimal>(_config.RepositoryId, "totalAmount", null, new List<DataFilter>());
-
-
-Get AVG of a given Field
-------------------------
-
-Returns average of items given field in list by states and / or data filters. 
-
-.. code-block:: csharp
-   :linenos:
-
-    var avg = await _createAnAPIClient.Avg<decimal>(_config.RepositoryId, "totalAmount", null, new List<DataFilter>());
-
-
-Get Min of a given Field
-------------------------
-
-Returns minimum of items given field in list by states and / or data filters. 
-
-.. code-block:: csharp
-   :linenos:
-
-    var min = await _createAnAPIClient.Min<DateTime>(_config.RepositoryId, "orderDate", null, new List<DataFilter>());
-
-
-Get Max of a given Field
-------------------------
-
-Returns maximum of items given field in list by states and / or data filters. 
-
-.. code-block:: csharp
-   :linenos:
-
-    var max = await _createAnAPIClient.Max<DateTime>(_config.RepositoryId, "orderDate", null, new List<DataFilter>());
-
+Delete Functions
+----------------
 
 Delete Data
----------------
+"""""""""""""""""""""""""""""""""""""""""""
 
 Deletes a single data by id
 
@@ -280,9 +281,8 @@ Deletes a single data by id
 
     var result = await _createAnAPIClient.Delete(repositoryId, dataId);
 
-
 Delete Data List
-----------------
+"""""""""""""""""""""""""""""""""""""""""""
 
 Deletes items based on states and / or filters
 
@@ -304,9 +304,92 @@ Deletes items based on states and / or filters
     });
  
 
+Aggregate Functions
+-------------------
+
+
+Aggregate Union Step
+"""""""""""""""""""""""""""""""""""""""""""
+
+Combines multiple repositoryies as one
+
+.. code-block:: csharp
+   :linenos:
+
+    var unionList = await _createAnAPIClient.AggregateGetList<Product>(_config.Product1RepositoryId, new Aggregation()
+    {
+        Steps = new List<AggregationStep>()
+        {
+            new AggregationStep()
+            {
+                Type = "union",
+                UnionRepositoryId = _config.Product2RepositoryId
+            },
+        }
+    }, 0, 20, null, null, new List<DataSort>()
+    {
+        new DataSort()
+        {
+            Desc = true,
+            Selector = "Quantity"
+        }
+    });
+
+
+Aggregate Lookup Step
+"""""""""""""""""""""""""""""""""""""""""""
+
+Left joins another repository by matching given fields. 
+
+.. code-block:: csharp
+   :linenos:
+
+    var lookupList = await _createAnAPIClient.AggregateGetList<LookupProduct>(_config.Product1RepositoryId, new Aggregation()
+    {
+        Steps = new List<AggregationStep>()
+        {
+            new AggregationStep()
+            {
+                Type = "lookup",
+                As = "Parts",
+                ForeignField = "ProductId",
+                LocalField = "ProductId",
+                LookupRepositoryId = _config.PartRepositoryId
+            }
+        }
+    }, 0, 20, null, new List<DataFilter>(), new List<DataSort>()
+    {
+        new DataSort()
+        {
+            Desc = true,
+            Selector = "Quantity"
+        }
+    });
+
+
+Aggregate Unwind Step
+"""""""""""""""""""""""""""""""""""""""""""
+
+Unwinds an item array and lets user to filter array items.
+
+.. code-block:: csharp
+   :linenos:
+
+    var unwindList = await _createAnAPIClient.AggregateGetList<UnwindProduct>(_config.Product1RepositoryId, new Aggregation()
+    {
+        Steps = new List<AggregationStep>()
+        {
+            new AggregationStep()
+            {
+                Type = "unwind",
+                Field = "Warehouses"
+            },
+        }
+    });
+
 
 Filter Operations
----------------------
+-----------------
 
 .. code-block:: csharp
    :linenos:
@@ -317,14 +400,6 @@ Filter Operations
         Operation = StringOperation.Equals,
         Value = "Active"
     };
-
-
-
-Available Filter Operations
----------------------------
-
-.. code-block:: csharp
-   :linenos:
 
     StringOperation.Contains;
     StringOperation.EndsWith;
@@ -357,90 +432,8 @@ Available Filter Operations
     IntegerOperation.LessThenOrEqual;
     IntegerOperation.NotEquals;
     
-Aggregate Union Step
----------------------
-
-Combines multiple repositoryies as one
-
-.. code-block:: csharp
-   :linenos:
-
-    var unionList = await _createAnAPIClient.AggregateGetList<Product>(_config.Product1RepositoryId, new Aggregation()
-    {
-        Steps = new List<AggregationStep>()
-        {
-            new AggregationStep()
-            {
-                Type = "union",
-                UnionRepositoryId = _config.Product2RepositoryId
-            },
-        }
-    }, 0, 20, null, null, new List<DataSort>()
-    {
-        new DataSort()
-        {
-            Desc = true,
-            Selector = "Quantity"
-        }
-    });
-
-
-Aggregate Lookup Step
----------------------
-
-Left joins another repository by matching given fields. 
-
-.. code-block:: csharp
-   :linenos:
-
-    var lookupList = await _createAnAPIClient.AggregateGetList<LookupProduct>(_config.Product1RepositoryId, new Aggregation()
-    {
-        Steps = new List<AggregationStep>()
-        {
-            new AggregationStep()
-            {
-                Type = "lookup",
-                As = "Parts",
-                ForeignField = "ProductId",
-                LocalField = "ProductId",
-                LookupRepositoryId = _config.PartRepositoryId
-            }
-        }
-    }, 0, 20, null, new List<DataFilter>(), new List<DataSort>()
-    {
-        new DataSort()
-        {
-            Desc = true,
-            Selector = "Quantity"
-        }
-    });
-
-
-Aggregate Unwind Step
----------------------
-
-Unwinds an item array and lets user to filter array items.
-
-.. code-block:: csharp
-   :linenos:
-
-    var unwindList = await _createAnAPIClient.AggregateGetList<UnwindProduct>(_config.Product1RepositoryId, new Aggregation()
-    {
-        Steps = new List<AggregationStep>()
-        {
-            new AggregationStep()
-            {
-                Type = "unwind",
-                Field = "Warehouses"
-            },
-        }
-    });
-
-
-
-
 Convensions
----------------------
+-----------
 
 .. code-block:: csharp
    :linenos:
@@ -478,9 +471,6 @@ Convensions
         public List<Line> Lines{ get; set; }
     }
 
-
-Rules
----------------------
 
 Create C# Class for each repository
 

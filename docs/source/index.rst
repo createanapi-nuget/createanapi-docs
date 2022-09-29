@@ -3,10 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to CreateAnAPI.com's documentation!
+CreateAnAPI.com
 ===========================================
 
+Welcome to CreateAnAPI.com's documentation!
+
 .. toctree::
+   :caption: Core
+   :maxdepth: -1
+
    auth/index
    repository/index
    task/index
@@ -14,5 +19,13 @@ Welcome to CreateAnAPI.com's documentation!
    bucket/index
    mail/index
    platform/index
+   
+
+
+.. toctree::
+   :caption: Services
+   :maxdepth: -1
+
    services/index
    nuget/index
+   

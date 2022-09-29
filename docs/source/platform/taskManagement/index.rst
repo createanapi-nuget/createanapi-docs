@@ -8,7 +8,8 @@ from Read the Docs.
 
 Enables the end user to trigger the tasks. 
 
-![Screenshot 2022-07-06 193200](https://user-images.githubusercontent.com/6174749/177599536-4363e660-b36f-4221-ab1c-c0d5db839609.png)
+.. image:: images/task-management-1.png
+   :width: 600
 
 
 Nuget Package

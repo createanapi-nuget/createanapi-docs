@@ -21,6 +21,11 @@ Welcome to CreateAnAPI.com's documentation!
    platform/index
    
 
+.. toctree::
+   :caption: Templates
+   :maxdepth: -1
+
+   task-templates/index
 
 .. toctree::
    :caption: Services

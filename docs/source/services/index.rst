@@ -6,6 +6,5 @@ usable to get details of projects, builds, versions and other details
 from Read the Docs.
 
 .. toctree::
-   dashboard/index
-   api/index
-   dotnet/index
+   odbc/index
+   supplierIndex/index

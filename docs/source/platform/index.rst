@@ -9,3 +9,5 @@ from Read the Docs.
    dashboard/index
    api/index
    dotnet/index
+   newPortal/index
+   taskManagement/index

@@ -1,4 +1,4 @@
-API
+Task API
 ==========
 
 This section of the documentation details the public API

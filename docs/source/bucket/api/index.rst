@@ -1,4 +1,4 @@
-API
+Bucket API
 ==========
 
 This section of the documentation details the public API

@@ -49,8 +49,8 @@ C# Client
     services.AddSupplierIndexClient(configuration);
 
 
-Config
----------------
+Supplier Index Client Config
+----------------------------
 
 .. code-block:: json
    :linenos:
@@ -59,8 +59,8 @@ Config
         "SupplierIndexAPIUrl": "https://supplier-index.createanapi.com"
     }
 
-Task
----------------
+Supplier Index Task
+-------------------
 
 .. code-block:: csharp
    :linenos:
@@ -134,8 +134,8 @@ Task
 Portal
 ---------------
 
-Startup.cs
----------------
+Supplier Index Startup.cs
+-------------------------
 
 .. code-block:: csharp
    :linenos:
@@ -178,8 +178,8 @@ https://github.com/createanapi-clients/createanapi-dev-docs/wiki/PromoStandards-
 
 https://github.com/createanapi-clients/createanapi-dev-docs/wiki/PromoStandards-Product-2.0.0-To-CreateAnAPI
 
-Supplier Index API Config
--------------------------
+Supplier Index API Config - New Supplier
+----------------------------------------
 
 .. code-block:: json
    :linenos:

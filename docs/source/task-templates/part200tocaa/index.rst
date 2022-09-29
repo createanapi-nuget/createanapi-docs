@@ -1,2 +1,2 @@
-PromoStandards Product 2.0.0 To CreateAnAPI
+PromoStandards Part 2.0.0 To CreateAnAPI
 ===========================================

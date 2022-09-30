@@ -1,0 +1,4 @@
+CreateAnAPI.External.Client.SendGridWebhook
+===========================================
+
+.. DANGER:: This is a legacy package. Do not use it in future implementations.

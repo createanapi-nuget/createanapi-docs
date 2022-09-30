@@ -1,2 +1,2 @@
-Basic Authentication Manager
+CreateAnAPI.WooCommerce
 ===============================

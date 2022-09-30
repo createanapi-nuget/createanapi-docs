@@ -1,0 +1,52 @@
+External Nuget Packages
+=========================
+   
+.. toctree::
+        
+    CreateAnAPI.AmazonSellerCentral/index
+    CreateAnAPI.AmeriCommerce/index
+    CreateAnAPI.Axis/index
+    CreateAnAPI.BigCommerce/index
+    CreateAnAPI.BigCommerce.Client/index
+    CreateAnAPI.CSV/index
+    CreateAnAPI.External.Client.PostgreSQL/index
+    CreateAnAPI.External.Client.SendGrid/index
+    CreateAnAPI.External.Client.SendGridWebhook/index
+    CreateAnAPI.External.Client.SQL/index
+    CreateAnAPI.FTP/index
+    CreateAnAPI.GoHighLevelClient/index
+    CreateAnAPI.Magento/index
+    CreateAnAPI.MagentoShop/index
+    CreateAnAPI.ManageOrders/index
+    CreateAnAPI.ManageOrders.Client/index
+    CreateAnAPI.NetSuite.Client/index
+    CreateAnAPI.NGC/index
+    CreateAnAPI.NopCommerce/index
+    CreateAnAPI.OneSource/index
+    CreateAnAPI.OnSite.Client/index
+    CreateAnAPI.PayJunction/index
+    CreateAnAPI.PromoStandards.Inventory100/index
+    CreateAnAPI.PromoStandards.Inventory121/index
+    CreateAnAPI.PromoStandards.Inventory200/index
+    CreateAnAPI.PromoStandards.Invoice001/index
+    CreateAnAPI.PromoStandards.Invoice100/index
+    CreateAnAPI.PromoStandards.MediaContent100/index
+    CreateAnAPI.PromoStandards.MediaContent110/index
+    CreateAnAPI.PromoStandards.OrderStatus100/index
+    CreateAnAPI.PromoStandards.OSN100/index
+    CreateAnAPI.PromoStandards.PPC100/index
+    CreateAnAPI.PromoStandards.ProductCompliance100/index
+    CreateAnAPI.PromoStandards.ProductData100/index
+    CreateAnAPI.PromoStandards.ProductData200/index
+    CreateAnAPI.PromoStandards.PurchaseOrder100/index
+    CreateAnAPI.QuickBooks.Desktop/index
+    CreateAnAPI.QuickBooks.Desktop.Data/index
+    CreateAnAPI.QuickBooks.Online/index
+    CreateAnAPI.Replink/index
+    CreateAnAPI.SageMember.Client/index
+    CreateAnAPI.ShipStation/index
+    CreateAnAPI.ShipStation.Client/index
+    CreateAnAPI.ShopWorks/index
+    CreateAnAPI.ShopWorks.Models/index
+    CreateAnAPI.SynCore.Client/index
+    CreateAnAPI.WooCommerce/index

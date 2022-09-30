@@ -49,25 +49,6 @@ should    be grouped    in pairs).``
 
 If the ``--pep-references`` option was supplied, there should be a live link to PEP 258 here.
 
-Math
-====
-
-This is a test. Here is an equation:
-:math:`X_{0:5} = (X_0, X_1, X_2, X_3, X_4)`.
-Here is another:
-
-.. math::
-    :label: This is a label
-
-    \nabla^2 f =
-    \frac{1}{r^2} \frac{\partial}{\partial r}
-    \left( r^2 \frac{\partial f}{\partial r} \right) +
-    \frac{1}{r^2 \sin \theta} \frac{\partial f}{\partial \theta}
-    \left( \sin \theta \, \frac{\partial f}{\partial \theta} \right) +
-    \frac{1}{r^2 \sin^2\theta} \frac{\partial^2 f}{\partial \phi^2}
-
-You can add a link to equations like the one above :eq:`This is a label` by using ``:eq:``.
-
 Meta
 ====
 
@@ -368,58 +349,3 @@ Admonitions
 .. admonition:: And, by the way...
 
    You can make up your own admonition too.
-
-Topics, Sidebars, and Rubrics
------------------------------
-
-.. sidebar:: Sidebar Title
-   :subtitle: Optional Subtitle
-
-   This is a sidebar.  It is for text outside the flow of the main
-   text.
-
-   .. rubric:: This is a rubric inside a sidebar
-
-   Sidebars often appears beside the main text with a border and
-   background color.
-
-.. topic:: Topic Title
-
-   This is a topic.
-
-.. rubric:: This is a rubric
-
-Target Footnotes
-----------------
-
-.. target-notes::
-
-Replacement Text
-----------------
-
-I recommend you try |Python|_.
-
-.. |Python| replace:: Python, *the* best language around
-
-Compound Paragraph
-------------------
-
-.. compound::
-
-   This paragraph contains a literal block::
-
-       Connecting... OK
-       Transmitting data... OK
-       Disconnecting... OK
-
-   and thus consists of a simple paragraph, a literal block, and
-   another simple paragraph.  Nonetheless it is semantically *one*
-   paragraph.
-
-This construct is called a *compound paragraph* and can be produced
-with the "compound" directive.
-
-Download Links
-==============
-
-:download:`This long long long long long long long long long long long long long long long download link should be blue, normal weight text with a leading icon, and should wrap white-spaces <static/yi_jing_01_chien.jpg>`

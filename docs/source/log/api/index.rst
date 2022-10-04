@@ -7,7 +7,7 @@ Log API
 .. code-block::
    :linenos:
 
-    curl --location --request POST '//api/log' \
+    curl --location --request POST '/api/log' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{
@@ -27,7 +27,7 @@ Log API
 .. code-block::
    :linenos:
 
-    curl --location --request POST '//api/log/batch' \
+    curl --location --request POST '/api/log/batch' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{

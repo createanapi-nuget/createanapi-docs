@@ -10,7 +10,7 @@ Query Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/data?skip=0&take=20&state={{STATE}}&filters={{FILTERS}}&sorts={{SORTS}}&include={{INCLUDE_FIELDS}}&exclude={{EXCLUDE_FIELDS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/data?skip=0&take=20&state={{STATE}}&filters={{FILTERS}}&sorts={{SORTS}}&include={{INCLUDE_FIELDS}}&exclude={{EXCLUDE_FIELDS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 
@@ -20,7 +20,7 @@ Query Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/data/{{DATA_ID}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/data/{{DATA_ID}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/data/first [GET]
@@ -29,7 +29,7 @@ Query Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/data/first?state={{STATE}}&filters={{FILTERS}}&sorts={{SORTS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/data/first?state={{STATE}}&filters={{FILTERS}}&sorts={{SORTS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/data/count [GET]
@@ -38,14 +38,14 @@ Query Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/data/count?state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/data/count?state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/avg?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/avg?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/:field/sum [GET]
@@ -54,7 +54,7 @@ Query Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/{{FIELD_NAME}}/sum?state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/{{FIELD_NAME}}/sum?state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/:field/min [GET]
@@ -63,7 +63,7 @@ Query Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/{{FIELD_NAME}}/min?state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/{{FIELD_NAME}}/min?state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/:field/max [GET]
@@ -72,7 +72,7 @@ Query Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/{{FIELD_NAME}}/max?state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/{{FIELD_NAME}}/max?state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/:field/avg [GET]
@@ -81,7 +81,7 @@ Query Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/{{FIELD_NAME}}/avg?state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/{{FIELD_NAME}}/avg?state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 Insert Endpoints
@@ -93,7 +93,7 @@ Insert Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request POST '//api/repository/{{REPOSITORY_ID}}/data' \
+    curl --location -g --request POST '/api/repository/{{REPOSITORY_ID}}/data' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{
@@ -112,7 +112,7 @@ Insert Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request POST '//api/repository/{{REPOSITORY_ID}}/data/batch' \
+    curl --location -g --request POST '/api/repository/{{REPOSITORY_ID}}/data/batch' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{
@@ -147,7 +147,7 @@ Update Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request PUT '//api/repository/{{REPOSITORY_ID}}/data/{{DATA_ID}}' \
+    curl --location -g --request PUT '/api/repository/{{REPOSITORY_ID}}/data/{{DATA_ID}}' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{
@@ -168,7 +168,7 @@ Update Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request POST '//api/repository/{{REPOSITORY_ID}}/data/batch/changeState' \
+    curl --location -g --request POST '/api/repository/{{REPOSITORY_ID}}/data/batch/changeState' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{
@@ -189,7 +189,7 @@ Update Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request PUT '//api/repository/{{REPOSITORY_ID}}/data/batch' \
+    curl --location -g --request PUT '/api/repository/{{REPOSITORY_ID}}/data/batch' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{
@@ -227,7 +227,7 @@ Delete Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request DELETE '//api/repository/{{REPOSITORY_ID}}/data/{{DATA_ID}}' \
+    curl --location -g --request DELETE '/api/repository/{{REPOSITORY_ID}}/data/{{DATA_ID}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/data/batch/delete [POST]
@@ -236,7 +236,7 @@ Delete Endpoints
 .. code-block::
    :linenos:
     
-    curl --location -g --request POST '//api/repository/{{REPOSITORY_ID}}/data/batch/delete' \
+    curl --location -g --request POST '/api/repository/{{REPOSITORY_ID}}/data/batch/delete' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{
@@ -259,7 +259,7 @@ Aggregate Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/aggregate/first?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}&sorts={{SORTS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/aggregate/first?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}&sorts={{SORTS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/aggregate/count [GET]
@@ -268,7 +268,7 @@ Aggregate Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/aggregate/count?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/aggregate/count?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/aggregate [GET]
@@ -277,7 +277,7 @@ Aggregate Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/aggregate?aggregation={{AGGREGATION}}&skip={{SKIP}}&take={{TAKE}}&includeCount={{INCLUDE_COUNT}}&state={{STATE}}&filters={{FILTERS}}&sorts={{SORTS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/aggregate?aggregation={{AGGREGATION}}&skip={{SKIP}}&take={{TAKE}}&includeCount={{INCLUDE_COUNT}}&state={{STATE}}&filters={{FILTERS}}&sorts={{SORTS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/aggregate/:field/sum [GET]
@@ -286,7 +286,7 @@ Aggregate Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/sum?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/sum?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/aggregate/:field/min [GET]
@@ -295,7 +295,7 @@ Aggregate Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/min?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/min?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/aggregate/:field/max [GET]
@@ -304,7 +304,7 @@ Aggregate Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/max?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/max?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/repository/:id/aggregate/:field/avg [GET]
@@ -313,5 +313,5 @@ Aggregate Endpoints
 .. code-block::
    :linenos:
 
-    curl --location -g --request GET '//api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/avg?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
+    curl --location -g --request GET '/api/repository/{{REPOSITORY_ID}}/aggregate/{{FIELD_NAME}}/avg?aggregation={{AGGREGATION}}&state={{STATE}}&filters={{FILTERS}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'

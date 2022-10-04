@@ -7,7 +7,7 @@ Task API
 .. code-block::
     :linenos:
 
-    curl --location --request POST '//api/task/{{TASK_ID}}/process/start' \
+    curl --location --request POST '/api/task/{{TASK_ID}}/process/start' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/task/:id/process/:processId/end [POST]
@@ -16,7 +16,7 @@ Task API
 .. code-block::
     :linenos:
     
-    curl --location --request POST '//api/task/{{TASK_ID}}/process/{{PROCESS_ID}}/end' \
+    curl --location --request POST '/api/task/{{TASK_ID}}/process/{{PROCESS_ID}}/end' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{
@@ -33,7 +33,7 @@ Task API
 .. code-block::
     :linenos:
 
-    curl --location --request GET '//api/task/{{TASK_ID}}/latestRun' \
+    curl --location --request GET '/api/task/{{TASK_ID}}/latestRun' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/task/:id/run/:processId [GET]
@@ -42,7 +42,7 @@ Task API
 .. code-block::
     :linenos:
 
-    curl --location --request GET '//api/task/{{TASK_ID}}/run/{{PROCESS_ID}}' \
+    curl --location --request GET '/api/task/{{TASK_ID}}/run/{{PROCESS_ID}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/task/:id/trigger [POST]
@@ -51,7 +51,7 @@ Task API
 .. code-block::
     :linenos:
 
-    curl --location --request POST '//api/task/{{TASK_ID}}/trigger' \
+    curl --location --request POST '/api/task/{{TASK_ID}}/trigger' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}' \
     --data-raw '{

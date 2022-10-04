@@ -7,7 +7,7 @@ Bucket API
 .. code-block::
    :linenos:
 
-    curl --location --request DELETE '//api/bucket/dolor Lorem/blob/dolor Lorem' \
+    curl --location --request DELETE '/api/bucket/{{BUCKET_ID}}/blob/{{KEY}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/bucket/:id/blob/:key [GET]
@@ -16,7 +16,7 @@ Bucket API
 .. code-block::
    :linenos:
 
-    curl --location --request GET '//api/bucket/dolor Lorem/blob/dolor Lorem' \
+    curl --location --request GET '/api/bucket/{{BUCKET_ID}}/blob/{{KEY}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 
@@ -26,7 +26,7 @@ Bucket API
 .. code-block::
    :linenos:
 
-    curl --location --request POST '//api/bucket/dolor Lorem/blob/dolor Lorem' \
+    curl --location --request POST '/api/bucket/{{BUCKET_ID}}/blob/{{KEY}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/bucket/:id/blob/:key/exists [GET]
@@ -35,7 +35,7 @@ Bucket API
 .. code-block::
    :linenos:
 
-    curl --location --request GET '//api/bucket/dolor Lorem/blob/dolor Lorem/exists' \
+    curl --location --request GET '/api/bucket/{{BUCKET_ID}}/blob/{{KEY}}/exists' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/bucket/:id/blob/:key/metadata [GET]
@@ -44,7 +44,7 @@ Bucket API
 .. code-block::
    :linenos:
 
-    curl --location --request GET '//api/bucket/dolor Lorem/blob/dolor Lorem/metadata' \
+    curl --location --request GET '/api/bucket/{{BUCKET_ID}}/blob/{{KEY}}/metadata' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'
 
 /api/bucket/:id/blob/search [GET]
@@ -53,5 +53,5 @@ Bucket API
 .. code-block::
    :linenos:
 
-    curl --location --request GET '//api/bucket/dolor Lorem/blob/search?query=dolor Lorem&continuationToken=dolor Lorem' \
+    curl --location --request GET '/api/bucket/{{BUCKET_ID}}/blob/search?query={{QUERY}}&continuationToken={{CONTINUATION_TOKEN}}' \
     --header 'Authorization: Bearer {{ACCESS_TOKEN}}'

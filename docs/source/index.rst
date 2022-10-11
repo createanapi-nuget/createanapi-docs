@@ -44,27 +44,15 @@ Welcome to CreateAnAPI.com's documentation!
    elements/lists_tables
    elements/structure
 
-
 Roadmap
+""""""""
 
-Repository
-
-Shortcodes
-
-Scheduled Task
-
-Schedule enable / disable
-
-Platform
-
-User management from admin
-
-Auto domain init for createanapi.com
-
-Custom domain
-
-Delete platform with resources
-
-Secret store
-
-Payment
+   |  - Repository
+   |     - Shortcodes
+   |  - Scheduled Task
+   |  - Platform
+   |     - User management from admin
+   |     - Custom domain
+   |     - Delete platform with resources
+   |  - Secret Store
+   |  - Payment

@@ -26,6 +26,11 @@ Schedule
 
 The schedule of the task based on the timespan. Task will run every selected timespan if enabled.
 
+Schedule Enabled
+""""""""""""""""""
+
+If the task is scheduled or not. If the schedule is disabled, tha task still can be triggered from admin, platforms or other tasks.
+
 Maximum Allowed Run Time
 """"""""""""""""""""""""
 

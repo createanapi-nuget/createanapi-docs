@@ -44,6 +44,8 @@ Available dynamic strings for this data are ``{{firstName}}``, ``{{lastName}}`` 
 
    var mailResponse = await _createAnAPIClient.PostMail(mailTemplateId, new Client.Models.Mail.MailItemRequest
    {
+         FromEmail = "no-reply@createanapi.com",
+         FromName = "CreateAnAPI.com",
          PreHtml = "<p>This will be rendered before the content</p>",
          AfterHtml = "<p>This will be rendered after the content</p>",
          Receivers = new List<string>()

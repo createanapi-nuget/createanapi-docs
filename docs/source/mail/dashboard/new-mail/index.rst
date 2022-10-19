@@ -45,5 +45,5 @@ From Email
 
 From email of the email. 
 
-.. Attention:: Must be a createanapi.com e-mail address.
+.. Attention:: Must be a createanapi.com predefined e-mail address or a custom domain for an account.
 

@@ -32,6 +32,12 @@ Repository retention is the number of days the data should be kept in the reposi
 
 .. Warning:: Please be aware of the retention. If set less than desired, you may risk losing the data after given period.
 
+Repository Template
+""""""""""""""""""""
+
+Predefined list of fields. If there are two fields with the same name defined in the template and the repository, the priority goes to the repository's field.
+
+
 Repository Fields
 -----------------
 

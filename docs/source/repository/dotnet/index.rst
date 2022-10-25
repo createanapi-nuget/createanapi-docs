@@ -303,6 +303,145 @@ Deletes items based on states and / or filters
         State = 1
     });
  
+Repository Management Functions
+-------------------------------
+
+Create Repository
+"""""""""""""""""""""""""""""""""""""""""""
+
+Creates a new repository
+
+.. code-block:: csharp
+   :linenos:
+
+    var create = await _createAnAPIClient.CreateRepository(new Repository()
+    {
+        Name = "Test",
+        Retention = 5,
+        TemplateId = "6357ee666638de15ea9d46af",
+        API = new RepositoryAPI()
+        {
+            Fields = new List<RepositoryAPIField>()
+            {
+                new RepositoryAPIField()
+                {
+                    Name = "Bool1",
+                    Type = "bool"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "Integer1",
+                    Type = "integer"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "Decimal1",
+                    Type = "decimal"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "String1",
+                    Type = "string"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "Date1",
+                    Type = "datetime"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "Tag1",
+                    Type = "tag"
+                }
+            }
+        }
+    });
+
+    
+Update Repository
+"""""""""""""""""""""""""""""""""""""""""""
+
+Updates a repository
+
+.. code-block:: csharp
+   :linenos:
+
+    var update = await _createAnAPIClient.UpdateRepository(create.Data.Id, new Repository()
+    {
+        Name = "Test",
+        Retention = 6,
+        TemplateId = "6357ee666638de15ea9d46af",
+        API = new RepositoryAPI()
+        {
+            Fields = new List<RepositoryAPIField>()
+            {
+                new RepositoryAPIField()
+                {
+                    Name = "Bool2",
+                    Type = "bool"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "Integer2",
+                    Type = "integer"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "Decimal2",
+                    Type = "decimal"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "String2",
+                    Type = "string"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "Date2",
+                    Type = "datetime"
+                },
+                new RepositoryAPIField()
+                {
+                    Name = "Tag2",
+                    Type = "tag"
+                }
+            }
+        }
+    });
+
+    
+Delete Repository
+"""""""""""""""""""""""""""""""""""""""""""
+
+Deletes a repository
+
+.. code-block:: csharp
+   :linenos:
+
+    var delete = await _createAnAPIClient.DeleteRepository(create.Data.Id);
+
+    
+Get Repository
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns a repository
+
+.. code-block:: csharp
+   :linenos:
+
+    var get = await _createAnAPIClient.GetRepository(create.Data.Id);
+
+    
+Get Repository List
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns the list of repositories
+
+.. code-block:: csharp
+   :linenos:
+
+    var getList = await _createAnAPIClient.GetRepositoryList();
+
 
 Aggregate Functions
 -------------------

@@ -109,3 +109,129 @@ Returns the details of the last process of a task.
     :linenos:
 
     var latestRunResponse = await _createAnAPIClient.GetLatestRun(taskId);
+
+
+
+
+    
+Create Tasl
+"""""""""""""""""""""""""""""""""""""""""""
+
+Creates a new task. If the task is based on a template, it can be runned instantly. If it is a custom task, GitHub actions should be triggered before run.
+
+.. code-block:: csharp
+    :linenos:
+
+    var create = await _createAnAPIClient.CreateTask(new Client.Models.Task.ScheduledTask
+    {
+        Type = "template",
+        Name = "Test",
+        MailReceivers = new List<string>() { "mehmetbuber@gmail.com" },
+        CPU = "256",
+        Memory = "1024",
+        StaticIp = true,
+        TimeSpan = new ScheduleTimeSpan()
+        {
+            Day = 1,
+            Hour = 1,
+            Minute = 1
+        },
+        MaxTimeSpan = new ScheduleTimeSpan()
+        {
+            Day = 1,
+            Hour = 1,
+            Minute = 1
+        },
+        EnvironmentVariables = new List<EnvironmentVariable>()
+        {
+            new EnvironmentVariable()
+            {
+                Key = "Key",
+                Value = "Value"
+            }
+        },
+        Notes = "test",
+        //Config = "{}",
+        TemplateId = "62bbbfd82245c7441afa103f",
+        ScheduleEnabled = true
+    });
+
+
+    
+Get Task
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns the details of the task.
+
+.. code-block:: csharp
+    :linenos:
+
+    var get = await _createAnAPIClient.GetTask(create.Data.Id);
+
+
+    
+Get Task List
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns a list of tasks
+
+.. code-block:: csharp
+    :linenos:
+
+    var getList = await _createAnAPIClient.GetTaskList();
+
+
+    
+UpdateTask
+"""""""""""""""""""""""""""""""""""""""""""
+
+Updates a task.
+
+.. code-block:: csharp
+    :linenos:
+    
+    var update = await _createAnAPIClient.UpdateTask(create.Data.Id, new Client.Models.Task.ScheduledTask()
+    {
+        Type = "template",
+        Name = "Test 2",
+        MailReceivers = new List<string>() { "mehmetbuber@webservicespros.com" },
+        CPU = "512",
+        Memory = "2048",
+        StaticIp = true,
+        TimeSpan = new ScheduleTimeSpan()
+        {
+            Day = 2,
+            Hour = 2,
+            Minute = 2
+        },
+        MaxTimeSpan = new ScheduleTimeSpan()
+        {
+            Day = 2,
+            Hour = 2,
+            Minute = 2
+        },
+        EnvironmentVariables = new List<EnvironmentVariable>()
+        {
+            new EnvironmentVariable()
+            {
+                Key = "Key2",
+                Value = "Value2"
+            }
+        },
+        Notes = "test2",
+        Config = "{}",
+        TemplateId = "62bbbfd82245c7441afa103f",
+        ScheduleEnabled = false
+    });
+
+
+    
+Delete Task
+"""""""""""""""""""""""""""""""""""""""""""
+
+Deletes a task
+
+.. code-block:: csharp
+    :linenos:
+
+    var delete = await _createAnAPIClient.DeleteTask(create.Data.Id);

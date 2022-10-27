@@ -114,7 +114,7 @@ Returns the details of the last process of a task.
 
 
     
-Create Tasl
+Create Task
 """""""""""""""""""""""""""""""""""""""""""
 
 Creates a new task. If the task is based on a template, it can be runned instantly. If it is a custom task, GitHub actions should be triggered before run.
@@ -189,7 +189,7 @@ Updates a task.
 
 .. code-block:: csharp
     :linenos:
-    
+
     var update = await _createAnAPIClient.UpdateTask(create.Data.Id, new Client.Models.Task.ScheduledTask()
     {
         Type = "template",

@@ -105,6 +105,17 @@ Returns maximum of items given field in list by states and / or data filters.
     var max = await _createAnAPIClient.Max<DateTime>(_config.RepositoryId, "orderDate", null, new List<DataFilter>());
 
 
+Get Distinct values of a Field
+"""""""""""""""""""""""""""""""""""""""""""
+
+Returns distinct values of a field by states and / or data filters. 
+
+.. code-block:: csharp
+   :linenos:
+
+    var distinct = await _createAnAPIClient.Distinct(_config.RepositoryId, "productBrand", null, null);
+    var distinctArray = await _createAnAPIClient.Distinct(_config.RepositoryId, "categories", null, null);
+
 Insert Functions
 -----------------
 

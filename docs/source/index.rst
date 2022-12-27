@@ -19,6 +19,7 @@ Welcome to CreateAnAPI.com's documentation!
    bucket/index
    mail/index
    platform/index
+   auth-repository/index
    
 
 .. toctree::

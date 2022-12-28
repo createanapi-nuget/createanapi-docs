@@ -10,7 +10,7 @@ Auth Repository Functions
 AuthRepositoryCreate
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Creates an auth repository
 
 .. code-block:: csharp
    :linenos:
@@ -27,7 +27,7 @@ Returns an item by id.
 AuthRepositoryUpdate
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Updates an auth repository
 
 .. code-block:: csharp
    :linenos:
@@ -40,7 +40,7 @@ Returns an item by id.
 AuthRepositoryGet
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Returns an auth repository by id.
 
 .. code-block:: csharp
    :linenos:
@@ -50,7 +50,7 @@ Returns an item by id.
 AuthRepositoryGetList
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Returns a list of auth repositories
 
 .. code-block:: csharp
    :linenos:
@@ -60,7 +60,7 @@ Returns an item by id.
 AuthRepositoryDelete
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Deletes an auth repository by id
 
 .. code-block:: csharp
    :linenos:
@@ -73,7 +73,7 @@ Auth Repository User Functions
 AuthRepositoryUserRegister
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Registers a new user to auth repository.
 
 .. code-block:: csharp
    :linenos:
@@ -92,7 +92,7 @@ Returns an item by id.
 AuthRepositoryUserGet
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Returns a user in auth repository by username
 
 .. code-block:: csharp
    :linenos:
@@ -102,7 +102,7 @@ Returns an item by id.
 AuthRepositoryUserGetList
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Returns a list of users in auth repository
 
 .. code-block:: csharp
    :linenos:
@@ -112,7 +112,7 @@ Returns an item by id.
 AuthRepositoryUserLogin
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Validates the username and password of a given user
 
 .. code-block:: csharp
    :linenos:
@@ -122,7 +122,7 @@ Returns an item by id.
 AuthRepositoryUserUpdate
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Updates a user by username
 
 .. code-block:: csharp
    :linenos:
@@ -141,7 +141,7 @@ Returns an item by id.
 AuthRepositoryUserDelete
 """""""""""""""""""""""""""""""""""""""""""
 
-Returns an item by id.
+Deletes a user by username
 
 .. code-block:: csharp
    :linenos:

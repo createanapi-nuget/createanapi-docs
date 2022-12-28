@@ -17,3 +17,8 @@ Auth Repository Name
 """"""""""""""""""""""""
 
 Auth Repository names are only used for users to identify the repository, it does not have any programatic impact and can be changed at any moment.
+
+Domains
+""""""""""""""""""""""""
+
+The domains of the authentication repository. 

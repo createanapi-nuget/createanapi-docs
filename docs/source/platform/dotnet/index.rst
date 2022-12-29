@@ -29,7 +29,7 @@ Updates the platform configuration.
 Get Platform User
 -----------------
 
-Updates the platform user.
+Returns the platform user.
 
 .. code-block:: csharp
    :linenos:

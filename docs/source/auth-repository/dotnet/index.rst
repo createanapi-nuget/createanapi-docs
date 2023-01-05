@@ -21,7 +21,11 @@ Creates an auth repository
         Domains = new List<string>()
         {
             "localhost:5001"
-        }
+        },
+        IsRegistrationEnabled = true,
+        IsResetPasswordEnabled = true,
+        RegistrationTokenExpiryInHours = 24,
+        ResetPasswordTokenExpiryInHours = 24
     });
 
 AuthRepositoryUpdate
@@ -73,13 +77,13 @@ Auth Repository User Functions
 AuthRepositoryUserRegister
 """""""""""""""""""""""""""""""""""""""""""
 
-Registers a new user to auth repository.
+Creates a new user to auth repository.
 
 .. code-block:: csharp
    :linenos:
 
 
-    var userRegisterResponse = await _createAnAPIClient.AuthRepositoryUserRegister(repoCreateResponse.Data.Id, new AuthRepositoryUserRegisterRequest()
+    var userRegisterResponse = await _createAnAPIClient.AuthRepositoryUserCreate(repoCreateResponse.Data.Id, new AuthRepositoryUserRegisterRequest()
     {
         Username = "username",
         Password = "password",
